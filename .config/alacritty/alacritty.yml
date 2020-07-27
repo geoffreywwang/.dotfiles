@@ -1,0 +1,60 @@
+# Window configuration
+window:
+  dimensions:
+    columns: 85
+    lines: 30
+  padding:
+    x: 10
+    y: 10
+  decorations: full
+  dynamic_title: true
+scrolling:
+  history: 10000
+  multiplier: 3
+background_opacity: 0.97
+
+# Font configuration
+font:
+  normal:
+    family: monospace
+    style: Regular
+  bold:
+    family: monospace
+    style: Bold
+  italic:
+    family: monospace
+    style: Italic
+  bold_italic:
+    family: monospace
+    style: Bold Italic
+  size: 14.0
+draw_bold_text_with_bright_colors: true
+
+# Colors (Material Theme)
+colors:
+  primary:
+    background: '#263238'
+    foreground: '#eeffff'
+  normal:
+    black:   '#000000'  # Arbitrary
+    red:     '#e53935'
+    green:   '#91b859'
+    yellow:  '#ffb62c'
+    blue:    '#6182b8'
+    magenta: '#ff5370'  # Dark pink of the original material theme
+    cyan:    '#39adb5'
+    white:   '#a0a0a0'  # Arbitrary
+  bright:
+    black:   '#4e4e4e'  # Arbitrary
+    red:     '#ff5370'
+    green:   '#c3e88d'
+    yellow:  '#ffcb6b'
+    blue:    '#82aaff'
+    magenta: '#f07178'  # Pink of the original material theme
+    cyan:    '#89ddff'
+    white:   '#ffffff'  # Arbitrary
+
+# Cursor configuration
+cursor:
+  style: Block
+  unfocused_hollow: true
