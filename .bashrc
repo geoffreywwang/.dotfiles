@@ -19,7 +19,8 @@ alias brewlist="brew leaves | xargs brew deps --tree"
 alias sshathena="ssh -Y -K geowang@ftp.dialup.mit.edu"
 export ATHENA="geowang@athena.dialup.mit.edu"
 
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+# Dot files git repository
+alias dots='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
 
 # Alison <3
 alias alison="echo 'I love you <3 <3 <3'"
