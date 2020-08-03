@@ -14,7 +14,7 @@ call plug#begin('~/.config/nvim/plugins')
     Plug 'itchyny/lightline.vim'
 "    Plug 'junegunn/fzf.vim'
 "    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-"    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " Auto-install missing plugins
@@ -103,19 +103,19 @@ function! s:check_back_space() abort
 endfunction
 
 " Use <tab> for trigger completion and navigate to the next complete item
-" inoremap <silent><expr> <Tab>
-"       \ pumvisible() ? "\<C-n>" :
-"       \ <SID>check_back_space() ? "\<Tab>" :
-"       \ coc#refresh()
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
 
 " Use <S-tab> to navigate to the previous complete item
-" inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Select first completion item and confirm
-" inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Esc to close completion menu
-" inoremap <silent><expr> <Esc> pumvisible() ? "\<C-y>" : "\<Esc>"
+inoremap <silent><expr> <Esc> pumvisible() ? "\<C-y>" : "\<Esc>"
 
 " GoTo code navigation.
 nmap <silent> <leader>gd <Plug>(coc-definition)

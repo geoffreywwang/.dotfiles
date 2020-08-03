@@ -25,6 +25,9 @@ alias dots='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
 # Alison <3
 alias alison="echo 'I love you <3 <3 <3'"
 
+# Pytorch
+alias pytorch="sudo docker run --gpus all --rm -it --ipc=host -p 8888:8888 -v /home/geoffrey/Documents/projects/pytorch:/home/geowang personal-pytorch:1.1"
+
 # ========== Bash ==========
 PS1='\[\e[0;2;3m\]\w\[\e[m\] \[\e[0;38;5;45m\]>\[\e[m\] \[\e0'
 export CLICOLOR=1
