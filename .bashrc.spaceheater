@@ -1,0 +1,60 @@
+# ==================== PATH ====================
+export PERSONAL_TOOLS_PATH=~/Documents/Tools
+export PATH="$PERSONAL_TOOLS_PATH:/usr/local/bin:$PATH"
+
+# ================== Python ====================
+# Initialize python to be the current version
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init - --no-rehash)"
+fi
+
+# ========== Aliases ===========
+alias ls="ls --color"
+
+# Used to open up this file for editing
+alias editPath="nvim ~/.bashrc"
+
+# Prints brew dependancy tree
+alias brewlist="brew leaves | xargs brew deps --tree"
+
+# MIT Athena cluster
+alias sshathena="ssh -Y -K geowang@ftp.dialup.mit.edu"
+export ATHENA="geowang@athena.dialup.mit.edu"
+
+# Dot files git repository
+alias dots='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
+
+# Alison <3
+alias alison="echo 'I love you <3 <3 <3'"
+
+# Open Bash in Pytorch container
+alias epytorch='sudo docker exec -it pytorch /bin/bash'
+
+# Start Pytorch docker image
+pytorch () {
+    tpath=${1:-`pwd`}
+    sudo docker run \
+                --gpus all \
+                --rm \
+                --name pytorch \
+                -it \
+                --ipc=host \
+                -p 8888:8888 \
+                -p 6006:6006 \
+                -p 2222:22 \
+                -e DISPLAY=$DISPLAY \
+                -v "$tpath:/root/mount" \
+                personal-pytorch:latest
+}
+
+# Open files on linux
+open () {
+    filename=${1}
+    xdg-open $filename
+}
+
+# ========== Bash ==========
+PS1='\[\e[0;37m\]\w \[\e[0;38;5;197m\][Spaceheater] \[\e[0;38;5;45m\]> \[\e[0m\]'
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+export LS_COLORS='di=1;36:ln=1;35:so=1;32:pi=1;33:ex=1;31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=34;43:'
